@@ -1,0 +1,67 @@
+{
+  "name": "nagndie-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "https://github.com/nangdie/taro-template",
+  "templateInfo": {
+    "name": "taro-ui",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "start": "npm run build:weapp -- --watch",
+    "build:weapp": "taro build --type weapp",
+    "build:swan": "taro build --type swan",
+    "build:alipay": "taro build --type alipay",
+    "build:tt": "taro build --type tt",
+    "build:h5": "taro build --type h5",
+    "build:rn": "taro build --type rn",
+    "build:qq": "taro build --type qq",
+    "build:jd": "taro build --type jd",
+    "build:quickapp": "taro build --type quickapp",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:swan": "npm run build:swan -- --watch",
+    "dev:alipay": "npm run build:alipay -- --watch",
+    "dev:tt": "npm run build:tt -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "dev:rn": "npm run build:rn -- --watch",
+    "dev:qq": "npm run build:qq -- --watch",
+    "dev:jd": "npm run build:jd -- --watch",
+    "dev:quickapp": "npm run build:quickapp -- --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@tarojs/cli": "3.0.17",
+    "@tarojs/components": "3.0.17",
+    "@tarojs/runtime": "3.0.17",
+    "@tarojs/taro": "3.0.17",
+    "lodash": "4.17.20",
+    "@tarojs/react": "3.0.17",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "taro-ui": "^3.0.0-alpha.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@tarojs/mini-runner": "3.0.17",
+    "@tarojs/webpack-runner": "3.0.17",
+    "@types/webpack-env": "^1.16.0",
+    "babel-preset-taro": "3.0.17",
+    "eslint": "^7.14.0",
+    "eslint-config-taro": "3.0.17",
+    "stylelint": "13.8.0",
+    "@typescript-eslint/parser": "^4.x",
+    "@typescript-eslint/eslint-plugin": "^4.x",
+    "typescript": "^4.1.2",
+    "@types/react": "^17.0.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}
