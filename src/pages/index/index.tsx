@@ -1,32 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { View, Text } from '@tarojs/components'
+import { useSelector, useDispatch } from "react-redux";
 import { AtButton } from 'taro-ui'
 
-import "taro-ui/dist/style/components/button.scss" // 按需引入
-import './index.scss'
-
-export default class Index extends Component {
-
-  componentWillMount () { }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  render () {
-    return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-        <AtButton type='primary'>I need Taro UI</AtButton>
-        <Text>Taro UI 支持 Vue 了吗？</Text>
-        <AtButton type='primary' circle={true}>支持</AtButton>
-        <Text>共建？</Text>
-        <AtButton type='secondary' circle={true}>来</AtButton>
-      </View>
-    )
+const Index = () => {
+  const count = useSelector(state => state.app.count);
+  const dispatch = useDispatch()
+  const addCount = () => {
+    dispatch({
+      type: 'app/saveCount',
+      payload: count + 1
+    })
   }
+
+  const requestCount = () => {
+    dispatch({ type: 'app/fetchCount' })
+  }
+
+  return <View>
+    <View>当前数字： {count}</View>
+    <AtButton type="primary" onClick={addCount}> 加1</AtButton>
+    <AtButton onClick={requestCount}> 模拟请求</AtButton>
+  </View>
 }
+
+export default Index
