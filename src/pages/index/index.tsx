@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react'
+import Taro from "@tarojs/taro";
 import { View, Text } from '@tarojs/components'
 import { useSelector, useDispatch } from "react-redux";
 import { AtButton } from 'taro-ui'
@@ -21,6 +22,8 @@ const Index = () => {
     <View>当前数字： {count}</View>
     <AtButton type="primary" onClick={addCount}> 加1</AtButton>
     <AtButton onClick={requestCount}> 模拟请求</AtButton>
+
+    <AtButton onClick={() => Taro.navigateTo({ url: '/pages/personal/index' })} >前往personal</AtButton>
   </View>
 }
 
