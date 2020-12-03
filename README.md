@@ -1,4 +1,4 @@
-# 开始使用 3.X Taro-Template
+# 开始使用 Taro-Template
 
 ## 简介
 > 什么是Taro ? Taro是能够一次开发多端的框架，如：微信/京东/百度/支付宝/字节跳动/ QQ 小程序/H5 等。
