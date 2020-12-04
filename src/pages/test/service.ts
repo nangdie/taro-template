@@ -1,5 +1,6 @@
 
-import fly from "../../utils/request";
+import fly from "@/utils/request";
+
 export function getTestList() {
     return fly.request({
         url: "/api/test",

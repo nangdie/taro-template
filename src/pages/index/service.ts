@@ -1,4 +1,4 @@
-import fly from "../../utils/request";
+import fly from "@/utils/request";
 
 export function getList() {
     return fly.request({

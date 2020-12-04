@@ -81,7 +81,11 @@ const config = {
   // 改成常用的 @/ 引入方式
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
-    '@/utils': path.resolve(__dirname, '..', 'src/utils')
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/services': path.resolve(__dirname, '..', 'src/services'),
+    '@/style': path.resolve(__dirname, '..', 'src/style'),
+    '@/config': path.resolve(__dirname, '..', 'src/config'),
+    '@/store': path.resolve(__dirname, '..', 'src/store'),
   }
 }
 

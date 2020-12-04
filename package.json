@@ -60,6 +60,7 @@
     "@tarojs/mini-runner": "3.0.17",
     "@tarojs/webpack-runner": "3.0.17",
     "@types/react": "^17.0.0",
+    "@types/react-redux": "^7.1.11",
     "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.x",
     "@typescript-eslint/parser": "^4.x",

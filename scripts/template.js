@@ -2,10 +2,10 @@ const fs = require('fs');
 const dirName = process.argv[2];
 // 转换成大写 test => Test ; test-page => TestPage
 const capPirName = dirName.split('-').map(str => str.substring(0, 1).toUpperCase() + str.substring(1)).join('')
+
 if (!dirName) {
-  console.log('文件夹名称不能为空！');
-  console.log('示例：npm run tep test');
-  process.exit(0);
+    console.error('示例：npm run tep 名称');
+    process.exit(0);
 }
 
 const config = `
@@ -76,7 +76,8 @@ export default ${capPirName}Model;
 `
 
 const service = `
-import fly from "../../utils/request";
+import fly from "@/utils/request";
+
 export function get${capPirName}List() {
     return fly.request({
         url: "/api/${dirName}",
@@ -87,11 +88,12 @@ export function get${capPirName}List() {
 
 fs.mkdirSync(`./src/pages/${dirName}`);
 process.chdir(`./src/pages/${dirName}`);
-fs.writeFileSync('model.ts', model);				// 1
-fs.writeFileSync(`index.tsx`, tsx);		// 2
-fs.writeFileSync('service.ts', service);		// 3
-fs.writeFileSync(`index.scss`, scss);	// 4
-fs.writeFileSync('index.config.ts', config);// 5
-fs.writeFileSync(`interface.d.ts`, interface); // 6
+fs.writeFileSync('model.ts', model);
+fs.writeFileSync(`index.tsx`, tsx);
+fs.writeFileSync('service.ts', service);
+fs.writeFileSync(`index.scss`, scss);
+fs.writeFileSync('index.config.ts', config);
+fs.writeFileSync(`interface.d.ts`, interface);
+
 console.log(`执行完成：src/pages/${dirName}`)
 process.exit(0);
