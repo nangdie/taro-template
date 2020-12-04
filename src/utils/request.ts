@@ -1,10 +1,10 @@
 import Taro, { showToast, hideLoading } from "@tarojs/taro";
 import Fly from "flyio/dist/npm/fly";  // 根据环境进行修改不同的包
-import { baseURL, timeout } from "./config";
-import store from "../../store";					// 你可能需要拿到获取公共数据进行判断
+import { requestConfig } from "../config";
+import store from "../store";					// 你可能需要拿到获取公共数据进行判断
 const request = new Fly();
-request.config.timeout = timeout;				    // 超时时间
-request.config.baseURL = baseURL;
+request.config.timeout = requestConfig.timeout;				    // 超时时间
+request.config.baseURL = requestConfig.baseURL;
 const whiteUrl = [''];								// 不拦截的请求url
 // 发送请求之前拦截
 request.interceptors.request.use(async config => {
@@ -19,15 +19,11 @@ request.interceptors.request.use(async config => {
     config.headers = {
         ...config.headers,
         Accept: "application/json",
-        "content-type": "application/json; charset=utf-8",
+        ContentType: "application/json; charset=utf-8",
         Authorization: AccessToken && AccessToken.AccessToken
     };
     config.body &&
-        Object.keys(config.body).forEach(val => {
-            if (config.body[val] === "") {
-                delete config.body[val];
-            }
-        });
+        Object.keys(config.body).forEach(val => !config.body[val] && delete config.body[val]);
 
     config.body = {
         ...config.body
