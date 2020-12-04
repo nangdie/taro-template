@@ -8,8 +8,6 @@
 
 ## 技术栈
 
-> 结构主要是参考了Umi
-
 - Taro
 - TypeScript
 - SCSS
