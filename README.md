@@ -13,7 +13,7 @@
 - Taro
 - TypeScript
 - SCSS
-- Redux
+- Redux+Dva
 - Flyio
 
 ## 关联文档
