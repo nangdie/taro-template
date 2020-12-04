@@ -35,7 +35,7 @@ const Index = () => {
     <AtButton type="primary" onClick={addCount}> 加1</AtButton>
     <AtButton onClick={requestCount}> 模拟请求</AtButton>
 
-    <AtButton onClick={() => Taro.navigateTo({ url: '/pages/personal/index' })} >前往personal</AtButton>
+    <AtButton className="margin-top" onClick={() => Taro.navigateTo({ url: '/pages/personal/index' })} >前往personal</AtButton>
   </View>
 }
 
