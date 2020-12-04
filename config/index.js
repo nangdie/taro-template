@@ -1,5 +1,6 @@
+const path = require('path');
 const config = {
-  projectName: 'client-app',
+  projectName: 'nagdie-app',
   date: '2020-12-3',
   designWidth: 750,
   deviceRatio: {
@@ -45,6 +46,23 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    router: {
+      customRoutes: {
+        '/pages/index/index': '/index'
+      },
+      mode: 'browser'
+    },
+    // 配置跨域
+    devServer: {
+      host: 'localhost',
+      port: 10086,
+      proxy: {
+        '/api/': {
+          target: 'http://192.168.3.99:3000/',
+          changeOrigin: true
+        },
+      }
+    },
     postcss: {
       autoprefixer: {
         enable: true,
@@ -59,6 +77,11 @@ const config = {
         }
       }
     }
+  },
+  // 改成常用的 @/ 引入方式
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils')
   }
 }
 
