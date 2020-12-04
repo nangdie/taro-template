@@ -20,4 +20,4 @@
 
 - [语雀](https://www.yuque.com/nangdie/wdisqd)
 - [Github](https://github.com/nangdie/taro-template)
-- 喜欢的可以点个star 、收藏什么的，可以接收最新的更新，谢谢啦 ~ （如果写得不好可以给我留言。）
+- 喜欢的可以点个star 、收藏什么的，不迷路还可以接收更新信息。谢谢啦 ~ （如果写得不好可以给我留言。）
