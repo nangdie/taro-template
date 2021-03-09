@@ -13,7 +13,7 @@
 
 - [语雀](https://www.yuque.com/nangdie/wdisqd)
 - [Github](https://github.com/nangdie/taro-template)
-- 喜欢的可以点个star 、收藏什么的，不迷路还可以接收更新信息。动力满满
+
 ##### nestjs封装&使用
 
 - nestjs [语雀](https://www.yuque.com/nangdie/datrmc)
